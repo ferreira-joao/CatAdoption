@@ -1,16 +1,37 @@
 import React from "react";
 
-import { Container, Logo } from "./styles";
+import {
+  MainContainer,
+  SubContainer,
+  DescriptionContainer,
+  Title,
+  SecondTitle,
+  ThirdTitle,
+  MainButton,
+  Logo,
+} from "./styles";
 
-import CatLogo from "../../assets/cat.svg";
+import CatPoster from "../../assets/cat_poster.jpg";
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <h1>HOME</h1>
+    <MainContainer>
+      <SubContainer>
+        <DescriptionContainer>
+          <Title>Happiness</Title>
 
-      <Logo src={CatLogo} />
-    </Container>
+          <SecondTitle>is having a cat</SecondTitle>
+
+          <ThirdTitle>as a friend.</ThirdTitle>
+
+          <MainButton>
+            <span>adopt a cat</span>
+          </MainButton>
+        </DescriptionContainer>
+
+        <Logo src={CatPoster} />
+      </SubContainer>
+    </MainContainer>
   );
 };
 

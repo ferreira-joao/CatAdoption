@@ -19,8 +19,9 @@ export const breakpoint = {
 };
 
 export const colors = {
-  primary: "#ff3300",
+  primary: "#ff9933",
   secondary: "#ff5c33",
   tertiary: "#ff8566",
-  text: "#999999",
+  background: "#662900",
+  text: "#FFF",
 };
