@@ -1,10 +1,16 @@
 import React from "react";
 
+import { Container, Logo } from "./styles";
+
+import CatLogo from "../../assets/cat.svg";
+
 const Home: React.FC = () => {
   return (
-    <div>
+    <Container>
       <h1>HOME</h1>
-    </div>
+
+      <Logo src={CatLogo} />
+    </Container>
   );
 };
 
