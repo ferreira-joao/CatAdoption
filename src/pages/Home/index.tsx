@@ -2,13 +2,12 @@ import React from "react";
 
 import {
   MainContainer,
-  SubContainer,
   DescriptionContainer,
   Title,
   SecondTitle,
   ThirdTitle,
   MainButton,
-  Logo,
+  Figure,
 } from "./styles";
 
 import CatPoster from "../../assets/cat_poster.jpg";
@@ -16,21 +15,19 @@ import CatPoster from "../../assets/cat_poster.jpg";
 const Home: React.FC = () => {
   return (
     <MainContainer>
-      <SubContainer>
-        <DescriptionContainer>
-          <Title>Happiness</Title>
+      <DescriptionContainer>
+        <Title>Happiness</Title>
 
-          <SecondTitle>is having a cat</SecondTitle>
+        <SecondTitle>is having a cat</SecondTitle>
 
-          <ThirdTitle>as a friend.</ThirdTitle>
+        <ThirdTitle>as a friend.</ThirdTitle>
 
-          <MainButton>
-            <span>adopt a cat</span>
-          </MainButton>
-        </DescriptionContainer>
+        <MainButton>adopt a cat</MainButton>
+      </DescriptionContainer>
 
-        <Logo src={CatPoster} />
-      </SubContainer>
+      <Figure>
+        <img src={CatPoster} />
+      </Figure>
     </MainContainer>
   );
 };
