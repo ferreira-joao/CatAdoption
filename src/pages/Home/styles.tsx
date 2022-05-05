@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../global/theme";
+import { colors, breakpoint } from "../../global/theme";
 
 export const MainContainer = styled.div`
   width: 100vw;
@@ -9,18 +9,6 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${colors.background};
-
-  > .sub-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  > .description-container {
-    display: flex;
-    flex-direction: column;
-    margin-right: 70px;
-  }
 `;
 
 export const SubContainer = styled.div`
@@ -33,6 +21,12 @@ export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 70px;
+
+  @media ${breakpoint.sm} {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 `;
 
 export const Title = styled.h1`
@@ -81,4 +75,14 @@ export const Logo = styled.img`
   border-radius: 5px;
   width: 700px;
   height: 700px;
+
+  @media ${breakpoint.sm} {
+    width: 400px;
+    height: 500px;
+  }
+
+  @media ${breakpoint.lg} {
+    width: 600px;
+    height: 600px;
+  }
 `;
