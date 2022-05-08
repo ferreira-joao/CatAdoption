@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Container } from "./styles";
+
 interface IMainCard {
   data: {
     id: number;
@@ -12,12 +14,23 @@ interface IMainCard {
 
 const MainCard: React.FC<IMainCard> = ({ data }) => {
   return (
-    <li key={data.id}>
+    <Container key={data.id}>
       <img src={data.photo} width="100px" height="100px" />
-      <p>{data.name}</p>
-      <p>{data.city}</p>
-      <p>{data.street}</p>
-    </li>
+
+      <div className="cat_description">
+        <h3>{data.name}</h3>
+
+        <p>
+          <span>City: </span>
+          {data.city}
+        </p>
+
+        <p>
+          <span>Address: </span>
+          {data.street}
+        </p>
+      </div>
+    </Container>
   );
 };
 
