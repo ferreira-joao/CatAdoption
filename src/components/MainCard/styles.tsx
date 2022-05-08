@@ -7,6 +7,8 @@ export const Container = styled.li`
   margin-bottom: 10px;
   background-color: ${colors.secondary};
   transition: 0.5s;
+  list-style-type: none;
+  cursor: pointer;
 
   img {
     border-radius: 10px 10px 5px 5px;
@@ -28,8 +30,8 @@ export const Container = styled.li`
   }
 
   .cat_description {
+    padding: 5px;
     text-align: center;
-    padding-bottom: 5px;
   }
 
   :hover {

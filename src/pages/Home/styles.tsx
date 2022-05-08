@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../global/theme";
+import { breakpoint, colors } from "../../global/theme";
 
 export const MainContainer = styled.div`
   width: 100%;
@@ -18,9 +18,19 @@ export const Header = styled.div`
   flex-direction: column;
   background-color: ${colors.background};
 
+  @media ${breakpoint.md} {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .figure {
     border: 3px solid rgb(247, 150, 116);
     border-radius: 70px;
+
+    @media ${breakpoint.md} {
+      margin-right: 50px;
+    }
   }
 
   h1 {

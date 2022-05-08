@@ -28,9 +28,11 @@ const Home: React.FC = () => {
           <Logo src={logo} />
         </div>
 
-        <h1>CatAdoption</h1>
+        <div>
+          <h1>CatAdoption</h1>
 
-        <p>Let us help you find your new pet!</p>
+          <p>Let us help you find your new pet!</p>
+        </div>
       </Header>
 
       <MainList data={cats} />
