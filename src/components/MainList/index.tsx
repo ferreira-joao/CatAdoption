@@ -5,9 +5,10 @@ import { Container } from "./styles";
 import { cats } from "./data";
 
 interface IMainItem {
-  item: [
+  data: [
     {
       id: number;
+      photo: string;
       name: string;
       city: string;
       street: string;
@@ -15,15 +16,16 @@ interface IMainItem {
   ];
 }
 
-const MainList: React.FC<IMainItem> = ({ item }) => {
+const MainList: React.FC<IMainItem> = ({ data }) => {
   return (
     <Container>
       <ul>
-        {cats.map((cat) => (
-          <li key={cat.id}>
-            <p>{cat.name}</p>
-            <p>{cat.city}</p>
-            <p>{cat.street}</p>
+        {data.map((i) => (
+          <li key={i.id}>
+            <img src={i.photo} width="100px" height="100px" />
+            <p>{i.name}</p>
+            <p>{i.city}</p>
+            <p>{i.street}</p>
           </li>
         ))}
       </ul>

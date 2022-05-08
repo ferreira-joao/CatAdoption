@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { MainContainer, Header, Logo } from "./styles";
 
@@ -6,7 +6,21 @@ import MainList from "../../components/MainList";
 
 import logo from "../../assets/cat_cartoon.svg";
 
+import { getCats } from "../../services/apiCalls";
+
 const Home: React.FC = () => {
+  const [cats, setCats] = useState([]);
+
+  const handleData = async () => {
+    const list = await getCats();
+
+    setCats(list);
+  };
+
+  useEffect(() => {
+    handleData();
+  }, []);
+
   return (
     <MainContainer>
       <Header>
@@ -19,7 +33,7 @@ const Home: React.FC = () => {
         <p>Let us help you find your new pet!</p>
       </Header>
 
-      <MainList />
+      <MainList data={cats} />
     </MainContainer>
   );
 };
