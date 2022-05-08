@@ -2,6 +2,8 @@ import React from "react";
 
 import { MainContainer, Header, Logo } from "./styles";
 
+import MainList from "../../components/MainList";
+
 import logo from "../../assets/cat_cartoon.svg";
 
 const Home: React.FC = () => {
@@ -16,6 +18,8 @@ const Home: React.FC = () => {
 
         <p>Let us help you find your new pet!</p>
       </Header>
+
+      <MainList />
     </MainContainer>
   );
 };
