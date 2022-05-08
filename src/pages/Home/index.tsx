@@ -9,7 +9,7 @@ import logo from "../../assets/cat_cartoon.svg";
 import { getCats } from "../../services/apiCalls";
 
 const Home: React.FC = () => {
-  const [cats, setCats] = useState([]);
+  const [cats, setCats] = useState<any>([]);
 
   const handleData = async () => {
     const list = await getCats();

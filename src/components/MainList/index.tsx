@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container } from "./styles";
 
-import { cats } from "./data";
+import MainCard from "../MainCard";
 
 interface IMainItem {
   data: [
@@ -19,16 +19,9 @@ interface IMainItem {
 const MainList: React.FC<IMainItem> = ({ data }) => {
   return (
     <Container>
-      <ul>
-        {data.map((i) => (
-          <li key={i.id}>
-            <img src={i.photo} width="100px" height="100px" />
-            <p>{i.name}</p>
-            <p>{i.city}</p>
-            <p>{i.street}</p>
-          </li>
-        ))}
-      </ul>
+      {data.map((i) => (
+        <MainCard data={i} />
+      ))}
     </Container>
   );
 };
