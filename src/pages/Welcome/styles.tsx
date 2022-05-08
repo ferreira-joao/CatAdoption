@@ -57,6 +57,7 @@ export const Figure = styled.div`
     }
   }
 `;
+
 export const MainButton = styled.button`
   background-color: #fff;
   margin-top: 10px;
@@ -81,6 +82,7 @@ export const MainButton = styled.button`
     width: 100%;
   }
 `;
+
 export const ThirdTitle = styled.p`
   font-size: 30px;
   font-weight: bold;
@@ -97,6 +99,7 @@ export const ThirdTitle = styled.p`
     font-size: 40px;
   }
 `;
+
 export const SecondTitle = styled.p`
   font-size: 30px;
   color: ${colors.text};
@@ -109,6 +112,7 @@ export const SecondTitle = styled.p`
     font-size: 40px;
   }
 `;
+
 export const Title = styled.h1`
   font-size: 50px;
   color: ${colors.text};
@@ -121,6 +125,7 @@ export const Title = styled.h1`
     font-size: 60px;
   }
 `;
+
 export const DescriptionContainer = styled.div`
   position: absolute;
   width: 100%;
@@ -138,6 +143,7 @@ export const DescriptionContainer = styled.div`
     width: 300px;
   }
 `;
+
 export const MainContainer = styled.div`
   width: 100%;
   height: 100%;

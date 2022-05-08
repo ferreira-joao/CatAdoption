@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import {
   MainContainer,
   DescriptionContainer,
@@ -22,7 +24,7 @@ const Welcome: React.FC = () => {
 
         <ThirdTitle>as a friend.</ThirdTitle>
 
-        <MainButton>adopt a cat</MainButton>
+        <Link to={"/home"}><MainButton>adopt a cat</MainButton></Link>
       </DescriptionContainer>
 
       <Figure>
