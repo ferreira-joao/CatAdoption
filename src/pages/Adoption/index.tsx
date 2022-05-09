@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Header, Logo } from "./styles";
+
+import AdoptionCard from "../../components/AdoptionCard";
 
 import { useParams } from "react-router-dom";
 
@@ -11,10 +13,12 @@ import logo from "../../assets/cat_cartoon.svg";
 const Adoption: React.FC = () => {
   const { id } = useParams() as { id: string };
 
-  const handleCat = async () => {
-    const list = await getCat(id);
+  const [cat, setCat] = useState() as any;
 
-    console.log(list);
+  const handleCat = async () => {
+    const item = await getCat(id);
+
+    setCat(item);
   };
 
   useEffect(() => {
@@ -34,7 +38,9 @@ const Adoption: React.FC = () => {
           <p>Let us help you find your new pet!</p>
         </div>
       </Header>
-      <h1>ID:{id}</h1>
+
+      <AdoptionCard data={cat} />
+      <p>{cat.name}</p>
     </div>
   );
 };

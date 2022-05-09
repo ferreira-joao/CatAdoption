@@ -9,6 +9,7 @@ export const Header = styled.div`
   border-end-end-radius: 10px;
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   background-color: ${colors.background};
 
