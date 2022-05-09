@@ -21,7 +21,11 @@ const MainCard: React.FC<IMainCard> = ({ data }) => {
       style={{ textDecoration: "none", color: "#000" }}
     >
       <Container key={data.id}>
-        <img src={data.photo} width="100px" height="100px" />
+        <img
+          src={`${data.photo}?random=${data.id}`}
+          width="100px"
+          height="100px"
+        />
 
         <div className="cat_description">
           <h3>{data.name}</h3>
