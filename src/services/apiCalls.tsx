@@ -8,3 +8,12 @@ export const getCats = () => {
     })
     .catch((err) => console.log(err));
 };
+
+export const getCat = (id: string) => {
+  return api
+    .get(`/cats/${id}`)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => console.log(err));
+};
