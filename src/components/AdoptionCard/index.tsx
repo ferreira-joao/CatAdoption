@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
+
+import { MainContainer } from "./styles";
 
 interface IAdoptionCard {
   data: {
@@ -11,14 +13,26 @@ interface IAdoptionCard {
 }
 
 const AdoptionCard: React.FC<IAdoptionCard> = ({ data }) => {
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
   return (
-    <div>
-      <p>z</p>
-    </div>
+    <MainContainer>
+      <div className="cat_data">
+        <img src={`${data.photo}?random=${data.id}`} />
+
+        <div className="cat_text">
+          <h3>{data.name}</h3>
+
+          <p>
+            <span>City: </span>
+            {data.city}
+          </p>
+
+          <p>
+            <span>Address: </span>
+            {data.street}
+          </p>
+        </div>
+      </div>
+    </MainContainer>
   );
 };
 

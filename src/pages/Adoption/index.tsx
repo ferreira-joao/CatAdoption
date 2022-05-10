@@ -10,10 +10,18 @@ import { getCat } from "../../services/apiCalls";
 
 import logo from "../../assets/cat_cartoon.svg";
 
+interface ICat {
+  id: number;
+  photo: string;
+  name: string;
+  city: string;
+  street: string;
+}
+
 const Adoption: React.FC = () => {
   const { id } = useParams() as { id: string };
 
-  const [cat, setCat] = useState() as any;
+  const [cat, setCat] = useState<ICat>();
 
   const handleCat = async () => {
     const item = await getCat(id);
@@ -39,8 +47,7 @@ const Adoption: React.FC = () => {
         </div>
       </Header>
 
-      <AdoptionCard data={cat} />
-      <p>{cat.name}</p>
+      {cat && <AdoptionCard data={cat} />}
     </div>
   );
 };

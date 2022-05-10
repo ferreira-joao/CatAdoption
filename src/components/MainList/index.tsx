@@ -20,7 +20,7 @@ const MainList: React.FC<IMainItem> = ({ data }) => {
   return (
     <Container>
       {data.map((i) => (
-        <MainCard data={i} />
+        <MainCard key={i.id} data={i} />
       ))}
     </Container>
   );

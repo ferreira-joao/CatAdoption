@@ -20,7 +20,7 @@ const MainCard: React.FC<IMainCard> = ({ data }) => {
       to={`/adoption/${data.id}`}
       style={{ textDecoration: "none", color: "#000" }}
     >
-      <Container key={data.id}>
+      <Container>
         <img
           src={`${data.photo}?random=${data.id}`}
           width="100px"
