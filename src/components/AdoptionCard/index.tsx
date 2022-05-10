@@ -2,6 +2,8 @@ import React from "react";
 
 import { MainContainer } from "./styles";
 
+import AdoptionTabs from "../AdoptionTabs";
+
 interface IAdoptionCard {
   data: {
     id: number;
@@ -31,6 +33,10 @@ const AdoptionCard: React.FC<IAdoptionCard> = ({ data }) => {
             {data.street}
           </p>
         </div>
+      </div>
+
+      <div className="adoption_info">
+        <AdoptionTabs />
       </div>
     </MainContainer>
   );
