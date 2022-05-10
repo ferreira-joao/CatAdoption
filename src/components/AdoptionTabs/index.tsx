@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-import { TabList } from "./styles";
+import { TabContainer, TabList } from "./styles";
+
+import {
+  AdoptionContentForm,
+  AdoptionContentPolicies,
+} from "../AdoptionTabsContent";
 
 const AdoptionTabs: React.FC = () => {
   const [tab, setTab] = useState("tab1");
@@ -14,7 +19,7 @@ const AdoptionTabs: React.FC = () => {
   }
 
   return (
-    <div>
+    <TabContainer>
       <TabList>
         <li className={tab === "tab1" ? "active" : ""} onClick={handleTab1}>
           <p>Adoption form</p>
@@ -23,7 +28,9 @@ const AdoptionTabs: React.FC = () => {
           <p>Adoption policies</p>
         </li>
       </TabList>
-    </div>
+
+      {tab === "tab1" ? <AdoptionContentForm /> : <AdoptionContentPolicies />}
+    </TabContainer>
   );
 };
 

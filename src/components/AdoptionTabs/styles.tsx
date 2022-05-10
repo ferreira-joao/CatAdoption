@@ -2,8 +2,14 @@ import styled from "styled-components";
 
 import { breakpoint, colors } from "../../global/theme";
 
+export const TabContainer = styled.div`
+  border: 1px solid ${colors.primary};
+  border-radius: 8px;
+`;
+
 export const TabList = styled.ul`
   width: 100%;
+  margin-bottom: 10px;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -11,12 +17,12 @@ export const TabList = styled.ul`
   li {
     width: 50%;
     padding: 10px;
-    border: 1px solid ${colors.primary};
     border-top-left-radius: 8px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     background-color: ${colors.primary};
+    transition: 0.5s;
 
     p {
       text-align: center;
@@ -26,7 +32,6 @@ export const TabList = styled.ul`
   }
 
   li.active {
-    border: 1px solid ${colors.primary};
     border-bottom: #fff;
     background-color: #fff;
 
@@ -42,7 +47,6 @@ export const TabList = styled.ul`
   }
 
   li:hover {
-    border: 1px solid ${colors.primary};
     border-bottom: #fff;
     background-color: ${colors.secondary};
 
