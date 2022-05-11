@@ -35,7 +35,7 @@ const AdoptionCard: React.FC<IAdoptionCard> = ({ data }) => {
         </div>
       </div>
 
-      <div className="adoption_info">
+      <div className="cat_adoption">
         <AdoptionTabs />
       </div>
     </MainContainer>

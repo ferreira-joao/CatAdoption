@@ -21,8 +21,48 @@ export const MainContainer = styled.div`
     span {
       font-weight: bold;
     }
+
+    @media ${breakpoint.md} {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        width: 50%;
+        height: 220px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    @media ${breakpoint.md} {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        width: 50%;
+        height: 10%;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+
+      h3 {
+        font-size: 40px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
   }
 
-  .adoption_info {
+  .cat_adoption {
+    display: flex;
+    justify-content: center;
   }
 `;

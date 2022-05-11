@@ -5,6 +5,10 @@ import { breakpoint, colors } from "../../global/theme";
 export const TabContainer = styled.div`
   border: 1px solid ${colors.primary};
   border-radius: 8px;
+
+  @media ${breakpoint.lg} {
+    width: 80%;
+  }
 `;
 
 export const TabList = styled.ul`
@@ -28,6 +32,10 @@ export const TabList = styled.ul`
       text-align: center;
       font-size: 12px;
       color: ${colors.text};
+
+      @media ${breakpoint.md} {
+        font-size: 15px;
+      }
     }
   }
 
@@ -38,6 +46,10 @@ export const TabList = styled.ul`
     p {
       font-size: 12px;
       color: ${colors.primary};
+
+      @media ${breakpoint.md} {
+        font-size: 15px;
+      }
     }
   }
 
@@ -53,6 +65,10 @@ export const TabList = styled.ul`
     p {
       font-size: 12px;
       color: #fff;
+
+      @media ${breakpoint.md} {
+        font-size: 15px;
+      }
     }
   }
 `;
