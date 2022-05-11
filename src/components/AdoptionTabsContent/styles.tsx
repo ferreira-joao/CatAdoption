@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../global/theme";
+import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
   padding: 0 10px 10px 10px;
@@ -31,6 +31,10 @@ export const Container = styled.div`
     color: ${colors.text};
     transition: 0.5s;
     cursor: pointer;
+
+    @media ${breakpoint.md} {
+      width: 10%;
+    }
   }
 
   button:hover {
